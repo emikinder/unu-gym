@@ -1,0 +1,50 @@
+.header {
+    height: 20vh;
+    width: 100%;
+    background-color: #f43517;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+
+.title {
+    color: white;
+    font-size: 1.5rem;
+    font-family: 'Rowdies', 'normal';
+}
+
+.header__user {
+    width: 100%;
+    display: flex;
+    justify-content: end;
+    align-items: center;
+    height: 7vh;
+    padding: 0 1rem;
+    box-sizing: border-box;
+    position: absolute;
+    bottom: 0;
+}
+
+.header__profile {
+    display: flex;
+    align-items: center;
+}
+
+.header__logout {
+    padding: .2rem;
+    margin-right: .5rem;
+    background-color: transparent;
+    border: 1px solid #201b32;
+    color: #201b32;
+    font-size: .8rem;
+    font-family: 'Lato', normal;
+}
+
+.header__userImg {
+    border-radius: 50%;
+    width: 30px;
+    height: 30px;
+    z-index: 999;
+}
