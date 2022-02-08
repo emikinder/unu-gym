@@ -24,7 +24,7 @@ const Home = ({ user }) => {
 
   useEffect(() => {
     async function fetchRutina() {
-      const rutina = await findOrCreateUser(user.uid);
+      const rutina = await findOrCreateUser('aU4pYZfmxKfGOEArksaDvkrnRWV2');
       setRutina(rutina);
     }
 
