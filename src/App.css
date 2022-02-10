@@ -6,3 +6,21 @@ body {
     margin: 0;
     background-color: #201b32;
 }
+
+.main {
+    color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 60vh;
+}
+
+.google__button {
+    padding: 1rem;
+    color: #f5682c;
+    border: 1px solid #f5682c;
+    align-self: center;
+    background-color: transparent;
+    text-decoration: none;
+}

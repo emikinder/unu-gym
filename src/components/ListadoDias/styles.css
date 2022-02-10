@@ -20,3 +20,7 @@
 .listadoDias__ejercicios {
     font-size: 0.8rem;
 }
+
+.no__underline {
+    text-decoration: none !important;
+}

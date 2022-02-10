@@ -6,20 +6,20 @@ import './styles.css';
 
 const auth = getAuth(firebaseApp);
 
-function Header({ user }) {
-    const [showLogOut, setShow] = useState(false);
+function Header() {
+    //const [showLogOut, setShow] = useState(false);
 
-    const logOut = () => {
-        signOut(auth);
-        setShow(false);
-    }
+    // const logOut = () => {
+    //     signOut(auth);
+    //     setShow(false);
+    // }
 
     return (
         <div className="header">
             <div className="title">
                 unu-gym
             </div>
-            <div className="header__user">
+            {/* <div className="header__user">
                 <div className="header__profile">
                     {showLogOut ? (
                         <button className="header__logout" onClick={() => logOut()}>
@@ -33,7 +33,7 @@ function Header({ user }) {
                         onClick={() => setShow(!showLogOut)}
                     /> : null}
                 </div>
-            </div>
+            </div> */}
         </div>
     )
 }
