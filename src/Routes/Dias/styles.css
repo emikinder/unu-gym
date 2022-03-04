@@ -1,3 +1,10 @@
+.container__spinner {
+    margin-top: 2rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
 .listadoDias {
     display: flex;
     flex-direction: column;
@@ -19,4 +26,8 @@
 
 .listadoDias__ejercicios {
     font-size: 0.8rem;
+}
+
+.no__underline {
+    text-decoration: none !important;
 }
