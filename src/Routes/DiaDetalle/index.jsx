@@ -1,16 +1,22 @@
 import React from 'react';
-import { useParams } from "react-router-dom";
-import Header from '../../components/Header';
+import { Link, useLocation, useParams } from "react-router-dom";
 
 import './styles.css';
 
 const DiaDetalle = () => {
+  const location = useLocation();
+  const { info }  = location.state;
+  const data = info.dia;
+  console.log(data);
   let params = useParams();
   console.log(params);
   return (
     <>
-      <Header />
-      <div>DiaDetalle {params.diaId}</div>
+    <Link to='/dias'>◀ </Link>
+      <h2>DiaDetalle {params.diaId}</h2>
+      { data && data.ejercicios.map((ejercicio, i) => {
+        return (<span key={i}>{ejercicio.nombre}</span>)
+      })}
     </>
   )
 }

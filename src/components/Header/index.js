@@ -1,10 +1,11 @@
 import React from 'react'
-import firebaseApp from "../../services/firebase";
-import { useState } from 'react/cjs/react.development';
-import { getAuth, signOut } from "firebase/auth";
+// import firebaseApp from "../../services/firebase";
+// import { useState } from 'react/cjs/react.development';
+// import { getAuth, signOut } from "firebase/auth";
+import { Link } from "react-router-dom";
 import './styles.css';
 
-const auth = getAuth(firebaseApp);
+// const auth = getAuth(firebaseApp);
 
 function Header() {
     //const [showLogOut, setShow] = useState(false);
@@ -17,7 +18,7 @@ function Header() {
     return (
         <div className="header">
             <div className="title">
-                unu-gym
+                <Link to="/" style={{ textDecoration: 'none', color: 'white' }}>unu-gym</Link>
             </div>
             {/* <div className="header__user">
                 <div className="header__profile">

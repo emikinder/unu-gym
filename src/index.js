@@ -1,18 +1,19 @@
-import { render } from "react-dom";
-import { BrowserRouter, Routes, Route } from "react-router-dom";
+import React from 'react';
+import ReactDOM from 'react-dom';
+import { BrowserRouter } from "react-router-dom";
 import App from "./App";
-import Dias from "./Routes/Dias";
-import DiaDetalle from "./Routes/DiaDetalle";
 
-const rootElement = document.getElementById("root");
-render(
+// const rootElement = document.getElementById("root");
+//   render(
+//     <BrowserRouter>
+//       <App />
+//     </BrowserRouter>,
+//     rootElement
+// );
+
+ReactDOM.render(
   <BrowserRouter>
-    <Routes>
-      <Route path="/" element={<App />} />
-      <Route path="dias" element={<Dias />}>
-        <Route path=":diaId" element={<DiaDetalle />} />
-      </Route>
-    </Routes>
+    <App />
   </BrowserRouter>,
-  rootElement
+  document.getElementById('root')
 );
