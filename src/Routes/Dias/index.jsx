@@ -5,13 +5,15 @@ import { getFirestore, doc, getDoc } from "firebase/firestore";
 import { Outlet, Link } from "react-router-dom";
 import Spinner from "../../components/commons/Spinner/index";
 
+import { FaCalendarCheck } from 'react-icons/fa';
+
 import "./styles.css";
 
 const firestore = getFirestore(firebaseApp);
 
 const listadoDias = (dias) => {
   return (
-    <div className="listadoDias">
+    <>
       {dias.map((dia) => {
         return (
           <Link
@@ -21,7 +23,7 @@ const listadoDias = (dias) => {
             data={dia}
           >
             <div className="listadoDias__dia">
-              <p>Día {dia.numero}</p>
+              <p><FaCalendarCheck /> DÍA {dia.numero}</p>
               <p className="listadoDias__ejercicios">
                 {dia.ejercicios.length} ejercicios
               </p>
@@ -29,7 +31,7 @@ const listadoDias = (dias) => {
           </Link>
         );
       })}
-    </div>
+    </>
   );
 };
 
@@ -50,7 +52,7 @@ const Dias = () => {
 
   return (
     <>
-      <main>
+      <div className="listadoDias">
         {dias ? (
           listadoDias(dias)
         ) : (
@@ -58,7 +60,7 @@ const Dias = () => {
             <Spinner />
           </div>
         )}
-      </main>
+      </div>
       <Outlet />
     </>
   );

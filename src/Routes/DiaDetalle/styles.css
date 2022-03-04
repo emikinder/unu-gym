@@ -1,0 +1,63 @@
+.detalle {
+    padding: .8rem;
+}
+
+.detalle__header {
+    display: flex;
+}
+
+.detalle__titulo {
+    margin-left: auto;
+    margin-right: auto;
+    color: white;
+    /* color: #f5682c; */
+    font-weight: 600;
+    font-size: 1.2rem;
+}
+
+.volver_ico {
+    position: absolute;
+    font-size: 1.5rem;
+    /* color: #f43517; */
+    color: #f5682c;
+}
+
+.ejercicio {
+    color: white;
+    display: flex;
+    border: 1px solid white;
+    min-height: 10vh;
+    margin: 1rem 0;
+    padding: .5rem 0;
+    box-sizing: border-box;
+}
+
+.ejercicio__reps {
+    margin: 0;
+    font-size: .9rem;
+}
+
+.ejercicio__nombre {
+    margin: 0;
+    font-size: 1.1rem;
+}
+
+.ejercicio__ico {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 2rem;
+    width: 35%;
+}
+
+.ejercicio__data {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 100%;
+}
+
+.ejercicio__check {
+    width: 25%;
+}
+
