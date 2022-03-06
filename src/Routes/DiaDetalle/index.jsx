@@ -1,5 +1,5 @@
 import React from 'react';
-import { Link, useLocation, useParams } from "react-router-dom";
+import { Link, useLocation } from "react-router-dom";
 
 import { FaArrowAltCircleLeft } from 'react-icons/fa';
 import { MdFitnessCenter } from 'react-icons/md';
@@ -17,7 +17,7 @@ const DiaDetalle = () => {
         {variaciones.map((variacion, index) => {
           return (
             <div key={index}>
-              <p className='ejercicio__reps'>{variacion.series} x {variacion.reps} x {variacion.peso}</p>
+              <p className='ejercicio__reps'><span className='ejercicio__num'>{variacion.series}</span> x {variacion.reps} x {variacion.peso}</p>
             </div>
           )
         })}
@@ -35,9 +35,6 @@ const DiaDetalle = () => {
               <div className='ejercicio__data'>
                 <p className='ejercicio__nombre'>{ejercicio.nombre}</p>
                 { ejercicio.variaciones ? (variaciones(ejercicio.variaciones)) : <></> }
-              </div>
-              <div className='ejercicio__check'>
-                
               </div>
             </div>
           )
